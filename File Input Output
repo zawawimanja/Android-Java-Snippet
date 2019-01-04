@@ -62,3 +62,51 @@ String path =" path1= Environment.getExternalStorageDirectory().getAbsolutePath(
 
 
     }
+    
+    
+    //show list of file 
+   
+    private void sendRestoreRequest2() {
+
+        String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/TuneBossData/Tables/";
+        File root = new File(path);
+        root.mkdirs(); //make directory
+        Log.d("test1",String.valueOf(root.getAbsolutePath()));
+
+        // ListDir(root,listFile);
+        final File[] files = root.listFiles();   //array and list all file
+        fileList.clear();               //clear the list
+        Log.d("test1",String.valueOf(files.length));
+
+        ArrayList<String> fNameArrayList = new ArrayList<>();
+        ArrayList<String> fAbsPathArrayList = new ArrayList<>();
+
+        for (int i=0; i < files.length; i++)
+        {
+            String fName =  files[i].getName();
+            String fAbsPath = files[i].getAbsolutePath();
+
+            if (getFileExt(fName).equalsIgnoreCase("txt"))
+            {
+                fNameArrayList.add(fName);
+                fAbsPathArrayList.add(fAbsPath);
+            }
+        }
+        
+           public static String getFileExt(String FileName)
+    {
+        return FileName.substring((FileName.lastIndexOf(".") + 1), FileName.length());
+    }
+
+
+        if (fNameArrayList.size() > 0)
+        {
+            String[] fNameStringArray = fNameArrayList.toArray(new String[fNameArrayList.size()]);
+            String[] fAbsPathStringArray = fAbsPathArrayList.toArray(new String[fAbsPathArrayList.size()]);
+            popUpFileChoice(fNameStringArray,fAbsPathStringArray);
+        }
+
+        fNameArrayList.clear();
+        fAbsPathArrayList.clear();
+
+    }
