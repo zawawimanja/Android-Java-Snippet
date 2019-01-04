@@ -1,0 +1,2 @@
+ Intent dash = new Intent(getApplicationContext(), NavigationViewActivity.class);
+                startActivity(dash);
