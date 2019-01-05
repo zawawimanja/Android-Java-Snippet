@@ -1,0 +1,3 @@
+ “onSaveInstanceState” and “onRestoreInstanceState”
+ 
+ problem when orientation. The proces will kill and start back the process.
