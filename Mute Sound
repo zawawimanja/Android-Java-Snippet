@@ -1,6 +1,6 @@
 
 
-
+//setting mute or play sound using shared preference
         final SharedPreferences sharedPreferences = getSharedPreferences("Score", Context.MODE_PRIVATE);
         final SharedPreferences.Editor editor = sharedPreferences.edit();
         final Button sound = (Button) findViewById(R.id.play_sound);
@@ -54,3 +54,15 @@
         if (sp.getInt("Sound", 0) == 0)
             mediaPlayer.start();
     }
+    
+    
+    //to play sound in each activity
+    
+           SharedPreferences sp = getSharedPreferences("Score", Context.MODE_PRIVATE);
+        //To play background sound
+        if (sp.getInt("Sound", 0) == 0) {
+            mediaPlayer = MediaPlayer.create(this, R.raw.abc);
+            mediaPlayer.start();
+            mediaPlayer.setLooping(true);
+        }
+
