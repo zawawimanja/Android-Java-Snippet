@@ -4,8 +4,8 @@
         final SharedPreferences sharedPreferences = getSharedPreferences("Score", Context.MODE_PRIVATE);
         final SharedPreferences.Editor editor = sharedPreferences.edit();
         final Button sound = (Button) findViewById(R.id.play_sound);
-        Button reset = (Button) findViewById(R.id.reset);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+     
+     
 
         if (sharedPreferences.getInt("Sound", 0) == 0) {
             sound.setText("Mute Sound");
