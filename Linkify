@@ -1,0 +1,7 @@
+
+
+//for web address
+
+TextView myWebSite = new TextView(this);
+myWebSite .setText("http://http://www.dzone.com/");
+Linkify.addLinks(myWebSite , Linkify.WEB_URLS);
