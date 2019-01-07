@@ -1,0 +1,26 @@
+
+//set timer 
+private void initTimer()
+    {
+        mCountDownTimer = new CountDownTimer(10000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                long sec = millisUntilFinished / 1000;
+                txtTimer.setText(sec + " Sec");
+                txtTimer.setTextColor(Color.BLACK);
+                if(sec <=5)
+                {
+                    txtTimer.setTextColor(Color.RED);
+                    anim.setRepeatCount(Animation.INFINITE);
+                    blinkText();
+                }else{
+                    anim.setRepeatCount(0);
+                }
+            }
+
+            public void onFinish() {
+                txtTimer.setText("Done!");
+                getNextQuestion();
+            }
+        };
+    }
