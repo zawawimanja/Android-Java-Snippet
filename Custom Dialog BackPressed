@@ -31,3 +31,22 @@
 
 
     }
+    
+    
+    //dialog
+    
+    
+        AlertDialog.Builder b = new AlertDialog.Builder(QuizMainActivity.this)
+                .setTitle("Exit")
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which)
+                    {
+                        dialog.dismiss();
+                        finish();
+                        sendResult();
+                    }
+                })
+                .setMessage("You will end the quiz!!!");
+        b.create().show();
