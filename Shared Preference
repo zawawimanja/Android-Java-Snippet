@@ -1,0 +1,31 @@
+ 
+ //for string
+ 
+    public static final String mypreference = "mypref";
+    public static final String Name = "nameKey";
+ 
+ String n = name.getText().toString();
+        sharedpreferences = getSharedPreferences(mypreference,  Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+        editor.putString(Name, n);
+        editor.commit();
+        
+        
+          sharedpreferences = getSharedPreferences(mypreference,
+                Context.MODE_PRIVATE);
+    
+
+        if (sharedpreferences.contains(Name)) {
+            main2.setText(sharedpreferences.getString(Name, ""));
+        }
+        
+//for int
+        
+         final SharedPreferences sharedPreferences = getSharedPreferences("Result", Context.MODE_PRIVATE);
+        final SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt(result,score);
+        editor.commit();
+        
+        
+        final SharedPreferences sharedPreferences = getSharedPreferences("Result", Context.MODE_PRIVATE);
+        int score1 = sharedPreferences.getInt(result,score);
