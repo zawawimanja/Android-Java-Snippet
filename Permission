@@ -7,14 +7,14 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
 
-//put in activity to request permission during runtime
+//put in activity oncreate to request permission during runtime
 
  if(Build.VERSION.SDK_INT>22){
             requestPermissions(new String[] {READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE}, 1);
         }
         
         
-        
+//override superclass
     @Override
     public void onRequestPermissionsResult(int requestCode,
                                            String permissions[], int[] grantResults) {
