@@ -65,4 +65,16 @@
             mediaPlayer.start();
             mediaPlayer.setLooping(true);
         }
+        
+        
+       //play sound when button click
+       
+       Button one = (Button) this.findViewById(R.id.button1);
+final MediaPlayer mp = MediaPlayer.create(this, R.raw.soho);
+one.setOnClickListener(new OnClickListener(){
+
+    public void onClick(View v) {
+        mp.start();
+    }
+});
 
