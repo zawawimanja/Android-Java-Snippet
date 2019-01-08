@@ -1,0 +1,29 @@
+
+
+//put in manifest above application tag
+
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+//put in activity to request permission during runtime
+
+ if(Build.VERSION.SDK_INT>22){
+            requestPermissions(new String[] {READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE}, 1);
+        }
+        
+        
+        
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case 1: {
+                if (!(grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED)) {
+                    Toast.makeText(FileProcess.this, "Permission denied to access your location.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }
+    }
