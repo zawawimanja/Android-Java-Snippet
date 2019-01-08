@@ -1,0 +1,89 @@
+//find the path of the file 
+ private void sendRestoreRequest2() {
+
+        String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Data/Tables/";
+        File root = new File(path);
+        root.mkdirs(); //make directory
+        Log.d("test1",String.valueOf(root.getAbsolutePath()));
+
+        // ListDir(root,listFile);
+        final File[] files = root.listFiles();   //array and list all file
+        fileList.clear();               //clear the list
+        Log.d("test1",String.valueOf(files.length));
+
+        ArrayList<String> fNameArrayList = new ArrayList<>();
+        ArrayList<String> fAbsPathArrayList = new ArrayList<>();
+
+        for (int i=0; i < files.length; i++)
+        {
+            String fName =  files[i].getName();
+            String fAbsPath = files[i].getAbsolutePath();
+
+            if (getFileExt(fName).equalsIgnoreCase("txt"))
+            {
+                fNameArrayList.add(fName);
+                fAbsPathArrayList.add(fAbsPath);
+            }
+        }
+
+        if (fNameArrayList.size() > 0)
+        {
+            String[] fNameStringArray = fNameArrayList.toArray(new String[fNameArrayList.size()]);
+            String[] fAbsPathStringArray = fAbsPathArrayList.toArray(new String[fAbsPathArrayList.size()]);
+            popUpFileChoice(fNameStringArray,fAbsPathStringArray);
+        }
+
+        fNameArrayList.clear();
+        fAbsPathArrayList.clear();
+
+    }
+
+
+//showlistview into a dialog
+
+popupFileChoice
+    private void popUpFileChoice(final String[] fNameStringArray,final String [] fAbsPathStringArray){
+        LayoutInflater layoutInflater = LayoutInflater.from(FileProcess.this);
+        final View promptView = layoutInflater.inflate(R.layout.filechoice_dialog, null);
+        final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(FileProcess.this);
+        alertDialogBuilder.setView(promptView);
+        final ListView listFile=(ListView)promptView.findViewById(R.id.listFile);
+        //df=(TextView)promptView.findViewById(R.id.df);
+        ///inflate filefinal TextView df=(TextView)promptView.findViewById(R.id.df);
+
+
+        for (int x = 0; x < fNameStringArray.length; x++) {
+            ArrayAdapter<String> directoryList = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,fNameStringArray);
+
+            listFile.setAdapter(directoryList);
+            listFile.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                    path1= Environment.getExternalStorageDirectory().getAbsolutePath() + "/TuneBossData/Tables/"+fNameStringArray[position];
+                    // df.setText(path);
+                }
+            });
+        }
+// setup a dialog window
+        AlertDialog.Builder builder = alertDialogBuilder
+                .setTitle("Select a Map file")
+                .setCancelable(false)
+                .setPositiveButton("Open File", new DialogInterface.OnClickListener() {
+                    @Override
+
+
+                    public void onClick(DialogInterface dialog, int id) {
+
+                        processReadFile(path1);
+
+                    }
+                })
+                .setNegativeButton("Back", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+
+                    }
+                });
+        alertDialogBuilder.create().show();
+    }
