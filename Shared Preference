@@ -14,7 +14,7 @@
           sharedpreferences = getSharedPreferences(mypreference,
                 Context.MODE_PRIVATE);
                 
-        string score1 = sharedPreferences.getString(Name,"");
+        String score1 = sharedpreferences.getString(Name,"");
 
         if (sharedpreferences.contains(Name)) {
             main2.setText(sharedpreferences.getString(Name, ""));
