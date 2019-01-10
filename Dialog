@@ -1,3 +1,5 @@
+ 
+ //custom dialog with custom widget
  public void onBackPressed() {
 
         final android.app.AlertDialog dialog2 = new android.app.AlertDialog.Builder(FileProcess.this).create();
@@ -52,7 +54,7 @@
         b.create().show();
         
         
-//custom dialog
+//custom dialog stock widget
         
          LayoutInflater layoutInflater = LayoutInflater.from(MainActivity.this);
                 final View promptView = layoutInflater.inflate(R.layout.dialog, null);
@@ -62,7 +64,6 @@
                 ///inflate filefinal TextView df=(TextView)promptView.findViewById(R.id.df);
 
 
-// setup a dialog window
                 android.app.AlertDialog.Builder builder = alertDialogBuilder
                         .setTitle("Select a Map file")
                         .setCancelable(false)
