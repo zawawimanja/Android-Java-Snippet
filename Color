@@ -1,0 +1,27 @@
+
+//change background according to color
+//change to default background
+//need to use shared preference
+//in xml onbuttonclick=changeBackground
+
+//current background color
+  private int mColor;
+  
+ //shared preference object
+  private SharedPreferences mPreferences;
+
+// Name of shared preferences file
+    private String sharedPrefFile =
+            "com.example.android.hellosharedprefs";
+  
+mColor = ContextCompat.getColor(this,   R.color.default_background);
+ mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+mColor = mPreferences.getInt(COLOR_KEY, mColor);mColor = ContextCompat.getColor(this,
+                R.color.default_background);
+
+
+ public void changeBackground(View view) {
+        int color = ((ColorDrawable) view.getBackground()).getColor();
+        mShowCountTextView.setBackgroundColor(color);
+        mColor = color;
+    }
