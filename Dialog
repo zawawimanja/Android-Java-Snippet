@@ -33,7 +33,7 @@
     }
     
     
-    //dialog
+ //dialog
     
     
         AlertDialog.Builder b = new AlertDialog.Builder(QuizMainActivity.this)
@@ -50,3 +50,36 @@
                 })
                 .setMessage("You will end the quiz!!!");
         b.create().show();
+        
+        
+//custom dialog
+        
+         LayoutInflater layoutInflater = LayoutInflater.from(MainActivity.this);
+                final View promptView = layoutInflater.inflate(R.layout.dialog, null);
+                final android.app.AlertDialog.Builder alertDialogBuilder = new android.app.AlertDialog.Builder(MainActivity.this);
+                alertDialogBuilder.setView(promptView);
+             TextView   df=(TextView)promptView.findViewById(R.id.dialog);
+                ///inflate filefinal TextView df=(TextView)promptView.findViewById(R.id.df);
+
+
+// setup a dialog window
+                android.app.AlertDialog.Builder builder = alertDialogBuilder
+                        .setTitle("Select a Map file")
+                        .setCancelable(false)
+                        .setPositiveButton("Open File", new DialogInterface.OnClickListener() {
+                            @Override
+
+
+                            public void onClick(DialogInterface dialog, int id) {
+
+                                //read send
+
+                            }
+                        })
+                        .setNegativeButton("Back", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int id) {
+
+                            }
+                        });
+                alertDialogBuilder.create().show();
