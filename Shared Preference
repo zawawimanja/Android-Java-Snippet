@@ -21,6 +21,10 @@
         }
         
 //for int
+
+//add static in activity commit
+   public static String result="highscore";
+    static  int score = 0;
         
          final SharedPreferences sharedPreferences = getSharedPreferences("Result", Context.MODE_PRIVATE);
         final SharedPreferences.Editor editor = sharedPreferences.edit();
