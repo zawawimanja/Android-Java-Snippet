@@ -34,3 +34,19 @@
         
         final SharedPreferences sharedPreferences = getSharedPreferences("Result", Context.MODE_PRIVATE);
         int score1 = sharedPreferences.getInt(result,score);
+        
+        
+//reset shared preference
+
+   mCount = 0;
+        mShowCountTextView.setText(String.format("%s", mCount));
+
+        // Reset color
+        mColor = ContextCompat.getColor(this,
+                R.color.default_background);
+        mShowCountTextView.setBackgroundColor(mColor);
+
+        // Clear preferences
+        SharedPreferences.Editor preferencesEditor = mPreferences.edit();
+        preferencesEditor.clear();
+        preferencesEditor.apply();
