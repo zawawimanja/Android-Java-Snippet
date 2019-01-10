@@ -50,3 +50,34 @@
         SharedPreferences.Editor preferencesEditor = mPreferences.edit();
         preferencesEditor.clear();
         preferencesEditor.apply();
+
+//onpause & onrestart mediaplayer
+
+@Override
+    protected void onPause() {
+        super.onPause();
+        SharedPreferences sp = getSharedPreferences("Score", Context.MODE_PRIVATE);
+        if (sp.getInt("Sound", 0) == 0)
+            mediaPlayer.pause();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        SharedPreferences sp = getSharedPreferences("Score", Context.MODE_PRIVATE);
+        if (sp.getInt("Sound", 0) == 0)
+            mediaPlayer.start();
+    }
+    
+    
+    //onpause intvalue 
+    
+        @Override
+    protected void onPause() {
+        super.onPause();
+
+        SharedPreferences.Editor preferencesEditor = mPreferences.edit();
+        preferencesEditor.putInt(COUNT_KEY, mCount);
+        preferencesEditor.putInt(COLOR_KEY, mColor);
+        preferencesEditor.apply();
+    }
