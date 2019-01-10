@@ -55,6 +55,7 @@
         
         
 //custom dialog stock widget
+//when using stock widget problem when want to resume the activity for positive button.
         
          LayoutInflater layoutInflater = LayoutInflater.from(MainActivity.this);
                 final View promptView = layoutInflater.inflate(R.layout.dialog, null);
