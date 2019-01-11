@@ -1,0 +1,17 @@
+package A;
+
+public class A {
+
+  public static void main(String[] args) {
+   
+   int [] a = new int [10];
+   
+   a[50]=10;
+   
+    System.out.println( a[50]);
+   
+  }
+}
+
+//java.lang.ArrayIndexOutOfBoundsException: length=10; index=50
+	
