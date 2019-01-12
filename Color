@@ -13,12 +13,11 @@
 // Name of shared preferences file
     private String sharedPrefFile =
             "com.example.android.hellosharedprefs";
-  
+            
+//set as default  color       
 mColor = ContextCompat.getColor(this,   R.color.default_background);
  mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
-mColor = mPreferences.getInt(COLOR_KEY, mColor);mColor = ContextCompat.getColor(this,
-                R.color.default_background);
-
+mColor = mPreferences.getInt(COLOR_KEY, mColor);
 
  public void changeBackground(View view) {
         int color = ((ColorDrawable) view.getBackground()).getColor();
