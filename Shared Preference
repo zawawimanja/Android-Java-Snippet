@@ -22,7 +22,6 @@
         }
         
 //for int
-
 //add static in activity commit
 
 
@@ -39,6 +38,9 @@
         
         final SharedPreferences sharedPreferences = getSharedPreferences("Result", Context.MODE_PRIVATE);
         int score1 = sharedPreferences.getInt(result,score);
+        
+        //if not using static because
+         int score1 = sharedPreferences.getInt(result,0);
         
         
 //reset shared preference
