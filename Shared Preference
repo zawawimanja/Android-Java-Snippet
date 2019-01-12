@@ -1,6 +1,7 @@
  
  //for string
- 
+  
+    SharedPreference   sharedpreferences;
     public static final String mypreference = "mypref";
     public static final String Name = "nameKey";
  
@@ -23,6 +24,10 @@
 //for int
 
 //add static in activity commit
+
+
+    SharedPreference   sharedpreferences;
+    public static final String mypreference = "result";
    public static String result="highscore";
     static  int score = 0;
         
