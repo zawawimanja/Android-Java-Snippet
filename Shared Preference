@@ -39,7 +39,7 @@
         final SharedPreferences sharedPreferences = getSharedPreferences("Result", Context.MODE_PRIVATE);
         int score1 = sharedPreferences.getInt(result,score);
         
-        //if not using static because
+ //if no default value use 0
          int score1 = sharedPreferences.getInt(result,0);
         
         
