@@ -1,0 +1,22 @@
+
+
+//declare on click in xml attribute
+
+  <Button
+        android:id="@+id/reset_button"
+        android:onClick="reset" />
+        
+//call method in class
+
+    public void reset(View view) {
+        // Reset count
+        mCount = 0;
+        mShowCountTextView.setText(String.format("%s", mCount));
+
+   
+    }
+
+
+        
+     
+     
