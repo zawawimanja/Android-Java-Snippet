@@ -1,5 +1,15 @@
 
-//set rating bar based on result
+//set rating bar based on result 
+
+    <RatingBar  
+        android:id="@+id/ratingBar"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:layout_marginLeft="72dp"  
+        android:layout_marginTop="60dp"  
+        app:layout_constraintStart_toStartOf="parent"  
+        app:layout_constraintTop_toTopOf="parent" />  
+  
 
 ratingBar.setRating(score1);
         scoreTxtView.setText(String.valueOf(score1));
