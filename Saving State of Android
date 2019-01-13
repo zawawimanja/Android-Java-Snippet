@@ -1,3 +1,30 @@
  “onSaveInstanceState” and “onRestoreInstanceState”
  
  problem when orientation. The proces will kill and start back the process.
+
+//READ https://inthecheesefactory.com/blog/fragment-state-saving-best-practices/en
+//PROBLEM WHEN VIEW DOES NOT HAVE ID
+
+public class MainActivity extends AppCompatActivity {
+
+    // These variable are destroyed along with Activity
+    private int someVarA;
+    private String someVarB;
+
+    ...
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("someVarA", someVarA);
+        outState.putString("someVarB", someVarB);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        someVarA = savedInstanceState.getInt("someVarA");
+        someVarB = savedInstanceState.getString("someVarB");
+    }
+
+}
