@@ -1,0 +1,28 @@
+//create and put in “res/drawable-ldpi“, “res/drawable-mdpi” or “res/drawable-hdpi“.
+//in main.xml
+
+  <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/android" />
+  
+  //set image when button click
+button.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				image.setImageResource(R.drawable.android3d);
+			}
+
+		});  
+    
+//imagebutton
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/android_button" />
+        
+
