@@ -24,5 +24,22 @@ button.setOnClickListener(new OnClickListener() {
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/android_button" />
+	
+//set different image
+
+
+        if(score1 == 0){
+            img.setImageResource(R.drawable.score_0);
+        }else if(score1 == 1){
+            img.setImageResource(R.drawable.score_1);
+        }else if(score1 == 2){
+            img.setImageResource(R.drawable.score_2);
+        }else if(score1 == 3){
+            img.setImageResource(R.drawable.score_3);
+        }else if(score1 == 4){
+            img.setImageResource(R.drawable.score_4);
+        }else if(score1 == 5){
+            img.setImageResource(R.drawable.score_5);
+        }	
         
 
