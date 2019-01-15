@@ -1,0 +1,62 @@
+//logic
+private Textview [][]xdataTable=new Textview[2][2];
+
+ xdataTable[0][0 ] =  xdata1a; xdataTable[1][0 ] =  xdata1b; 
+ 
+ //in xml
+         <TableLayout
+            android:id="@+id/xtabla_cuer1b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center" >
+
+            <TableRow
+                android:id="@+id/xxtbrl"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                >
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    >
+
+                    <TextView
+                        android:id="@+id/xtextView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|left"
+                        android:text="TPS%"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <TextView
+                        android:id="@+id/xstatView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|left"
+                        android:text="RPM"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    <ImageView
+                        android:id="@+id/ximageView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/xspeedL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\n"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:visibility="invisible" />
+                </FrameLayout> 
+            </TableRow>
+        </TableLayout>
+

@@ -1,4 +1,0 @@
-
-private Textview [][]xdataTable=new Textview[2][2];
-
- xdataTable[0][0 ] =  xdata1a; xdataTable[1][0 ] =  xdata1b; 
