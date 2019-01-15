@@ -1,0 +1,18 @@
+
+//logic in fragment
+public class PM_Fragement extends Fragment {
+   @Override
+   public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+      /**
+         * Inflate the layout for this fragment
+      */
+      return inflater.inflate(R.layout.pm_fragment, container, false);
+   }
+    
+//logic in main to move to fragment above    
+
+      FragmentManager fragmentManager = getFragmentManager();
+      FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+      fragmentTransaction.replace(android.R.id.content, pm_fragment);
+      fragmentTransaction.commit();
+    
