@@ -39,6 +39,9 @@ int i=Integer.parseInt(s);//NumberFormatException
      
      problem in xml because spelling like <textview> . Should change to <TextView>
      
+4)  Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'void android.widget.TextView.setOnClickListener(android.view.View$OnClickListener)' on a null object reference     
+     
+     Check back the id. It cannot find the id in xml.
 	
       
 	
