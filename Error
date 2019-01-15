@@ -15,6 +15,11 @@ public class A {
   }
 }
 
+2) Caused by: android.content.res.Resources$NotFoundException: String resource ID #0x0
+        at android.content.res.Resources.getText(Resources.java:348)
+        at android.widget.TextView.setText(TextView.java:5831)
+        at com.test.sampleconstrintsexample.QuizMainActivity.onCreate(QuizMainActivity.java:79)
+
 //trying to settext as integer ! so that why  it is error.
 int score=0;
 //will give error
@@ -22,24 +27,21 @@ scoreno.settext(score)
 //solution 
 scoreno.settext(""+score);
 scoreno.settext(Integer.tostring(scoreno));
-Caused by: android.content.res.Resources$NotFoundException: String resource ID #0x0
-        at android.content.res.Resources.getText(Resources.java:348)
-        at android.widget.TextView.setText(TextView.java:5831)
-        at com.test.sampleconstrintsexample.QuizMainActivity.onCreate(QuizMainActivity.java:79)
+
 	
-2)  NumberFormatException occurs
+3)  NumberFormatException occurs
 string variable that has characters, converting this variable into digit will occur NumberFormatException.
 
 String s="abc";  
 int i=Integer.parseInt(s);//NumberFormatException 	
 
 
-3)  Caused by: android.view.InflateException: Binary XML file line #46: Binary XML file line #46: Error inflating class textView
+4)  Caused by: android.view.InflateException: Binary XML file line #46: Binary XML file line #46: Error inflating class textView
      Caused by: android.view.InflateException: Binary XML file line #46: Error inflating class textView
      
      problem in xml because spelling like <textview> . Should change to <TextView>
      
-4)  Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'void android.widget.TextView.setOnClickListener(android.view.View$OnClickListener)' on a null object reference     
+5)  Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'void android.widget.TextView.setOnClickListener(android.view.View$OnClickListener)' on a null object reference     
      
    a)  Check back the id. It cannot find the id in xml.
    b) wrong layout.  setContentView(R.layout.activity_sub_fuel2_cylinder2); 
