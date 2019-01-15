@@ -1,3 +1,5 @@
+1) action bar
+
 @Override
 public boolean onCreateOptionsMenu(Menu menu) {
     // Inflate the menu; this adds items to the action bar if it is present.
@@ -58,3 +60,28 @@ Override
     </style>
 
 </resources>
+
+2) toolbar
+
+public class MyActivity extends AppCompatActivity {
+  // ...
+}
+
+//in manifest
+<application
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+    />
+    
+//toobar
+<android.support.v7.widget.Toolbar
+   android:id="@+id/my_toolbar"
+   android:layout_width="match_parent"
+   android:layout_height="?attr/actionBarSize"
+   android:background="?attr/colorPrimary"
+   android:elevation="4dp"
+   android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+   app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+   
+ //logic
+ Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+    setSupportActionBar(myToolbar);
