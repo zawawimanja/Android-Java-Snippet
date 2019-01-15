@@ -1,5 +1,5 @@
 
-//java.lang.ArrayIndexOutOfBoundsException: length=10; index=50
+1) java.lang.ArrayIndexOutOfBoundsException: length=10; index=50
 package A;
 
 public class A {
@@ -15,8 +15,6 @@ public class A {
   }
 }
 
-
-
 //trying to settext as integer ! so that why  it is error.
 int score=0;
 //will give error
@@ -28,5 +26,12 @@ Caused by: android.content.res.Resources$NotFoundException: String resource ID #
         at android.content.res.Resources.getText(Resources.java:348)
         at android.widget.TextView.setText(TextView.java:5831)
         at com.test.sampleconstrintsexample.QuizMainActivity.onCreate(QuizMainActivity.java:79)
+	
+2)  NumberFormatException occurs
+string variable that has characters, converting this variable into digit will occur NumberFormatException.
+
+String s="abc";  
+int i=Integer.parseInt(s);//NumberFormatException 	
+	
       
 	
