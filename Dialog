@@ -55,7 +55,7 @@
         
         
 //custom dialog stock widget
-//when using stock widget problem when want to resume the activity for positive button.
+//when using stock widget problem when want to resume the activity for button.
         
          LayoutInflater layoutInflater = LayoutInflater.from(MainActivity.this);
                 final View promptView = layoutInflater.inflate(R.layout.dialog, null);
@@ -81,6 +81,8 @@
                         .setNegativeButton("Back", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
+                            
+                            dialog.cancel();
 
                             }
                         });
