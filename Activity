@@ -1,0 +1,16 @@
+1 )extends AppCompact
+//for adding action bar
+public class MyActivity extends AppCompatActivity {
+  // ...
+}
+
+2)extends Activity
+
+3?extends BaseActivity to display drawer in each activity
+public abstract class AbstractActivity extends Activity{}
+
+// You all other classes
+public class FirstActivity extends AbstractActivity{}
+public class SecondActivity extends AbstractActivity{}
+
+
