@@ -68,3 +68,8 @@ textView1.setText(str);
 	}
 
 
+4) fetch json using volley 
+
+https://www.javatpoint.com/volley-library-fetching-json-data-from-url
+
+
