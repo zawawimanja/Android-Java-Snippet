@@ -1,0 +1,70 @@
+1) parse json object
+
+public static final String JSON_STRING="{\"employee\":{\"name\":\"Sachin\",\"salary\":56000}}";  
+ 
+try{  
+JSONObject emp=(new JSONObject(JSON_STRING)).getJSONObject("employee");  
+String empname=emp.getString("name");  
+int empsalary=emp.getInt("salary");  
+  
+String str="Employee Name:"+empname+"\n"+"Employee Salary:"+empsalary;  
+textView1.setText(str);  
+  
+}catch (Exception e) {e.printStackTrace();}  
+  
+}  
+
+2) parse json array of object
+ String strJson="{ \"Employee\" :[{\"id\":\"101\",\"name\":\"Sonoo Jaiswal\",\"salary\":\"50000\"},{\"id\":\"102\",\"name\":\"Vimal Jaiswal\",\"salary\":\"60000\"}] }";  
+          
+               String data = "";  
+               try {  
+                     // Create the root JSONObject from the JSON string.  
+                   JSONObject  jsonRootObject = new JSONObject(strJson);  
+  
+                   //Get the instance of JSONArray that contains JSONObjects  
+                    JSONArray jsonArray = jsonRootObject.optJSONArray("Employee");  
+                     
+                    //Iterate the jsonArray and print the info of JSONObjects  
+                    for(int i=0; i < jsonArray.length(); i++){  
+                        JSONObject jsonObject = jsonArray.getJSONObject(i);  
+                           
+                        int id = Integer.parseInt(jsonObject.optString("id").toString());  
+                        String name = jsonObject.optString("name").toString();  
+                        float salary = Float.parseFloat(jsonObject.optString("salary").toString());  
+                           
+                        data += "Node"+i+" : \n id= "+ id +" \n Name= "+ name +" \n Salary= "+ salary +" \n ";  
+                      }  
+                    output.setText(data);  
+                 } catch (JSONException e) {e.printStackTrace();}  
+      }  
+      
+3)   read json file in assets
+
+  ArrayList<String> items=getCountries("countries.json");
+  //return value of json into list
+	private ArrayList<String> getCountries(String fileName){
+		JSONArray jsonArray=null;
+		ArrayList<String> cList=new ArrayList<String>();
+		try {
+			InputStream is = getResources().getAssets().open("country.json");
+			int size = is.available();
+			byte[] data = new byte[size];
+			is.read(data);
+			is.close();
+			String json = new String(data, "UTF-8");
+			jsonArray=new JSONArray(json);
+			if (jsonArray != null) {
+				for (int i = 0; i < jsonArray.length(); i++) {
+					cList.add(jsonArray.getJSONObject(i).getString("cname"));
+				}
+			}
+		}catch (IOException e){
+			e.printStackTrace();
+		}catch (JSONException je){
+			je.printStackTrace();
+		}
+		return cList;
+	}
+
+
