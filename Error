@@ -45,6 +45,25 @@ int i=Integer.parseInt(s);//NumberFormatException
      
    a)  Check back the id. It cannot find the id in xml.
    b) wrong layout.  setContentView(R.layout.activity_sub_fuel2_cylinder2); 
+   
+6)Downloads\gradle-2.3-all.zip (The system cannot find the path specified)
+https://services.gradle.org/distributions/
+
+
+7)Cannot access ActivityCompatApi23 class
+C:\Users\Documents\.gradle\wrapper\dists\gradle-2.10-all\a4w5fzrkeut1ox71xslb49gst
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
      
 	
       
