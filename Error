@@ -47,11 +47,17 @@ int i=Integer.parseInt(s);//NumberFormatException
    b) wrong layout.  setContentView(R.layout.activity_sub_fuel2_cylinder2); 
    
 6)Downloads\gradle-2.3-all.zip (The system cannot find the path specified)
-https://services.gradle.org/distributions/
+Download zip and  put into folder https://services.gradle.org/distributions/
+C:\Users\Documents\.gradle\wrapper\dists\gradle-2.10-all\a4w5fzrkeut1ox71xslb49gst
+or 
+
+Solution: just go to gradle.wrapper.properties and then,
+
+distributionUrl=https\://services.gradle.org/distributions/gradle-3.4-all.zip
 
 
 7)Cannot access ActivityCompatApi23 class
-C:\Users\Documents\.gradle\wrapper\dists\gradle-2.10-all\a4w5fzrkeut1ox71xslb49gst
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
