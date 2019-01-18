@@ -1,0 +1,79 @@
+//need to add in gradle file 
+compile 'com.google.android.gms:play-services-ads:8.4.0'  
+
+1)Interstitial
+public class InterstitialAdsActivity extends AppCompatActivity {  
+    InterstitialAd mInterstitialAd;  
+  
+    @Override  
+    protected void onCreate(Bundle savedInstanceState) {  
+        super.onCreate(savedInstanceState);  
+        setContentView(R.layout.activity_interstitial_ads);  
+        mInterstitialAd = new InterstitialAd(this);  
+  
+        // set the ad unit ID  
+        mInterstitialAd.setAdUnitId(getString(R.string.interstitial_full_screen));  
+  
+        AdRequest adRequest = new AdRequest.Builder().build();  
+  
+        // Load ads into Interstitial Ads  
+        mInterstitialAd.loadAd(adRequest);  
+  
+        mInterstitialAd.setAdListener(new AdListener() {  
+            public void onAdLoaded() {  
+                showInterstitial();  
+            }  
+        });  
+    }  
+  
+    private void showInterstitial() {  
+        if (mInterstitialAd.isLoaded()) {  
+            mInterstitialAd.show();  
+        }  
+    }  
+  
+}  
+//in manifest
+    <uses-permission android:name="android.permission.INTERNET" />  
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />  
+    
+2)banner ads    
+
+public class MainActivity extends AppCompatActivity {  
+    private AdView adView;  
+    AdRequest adRequest;  
+    @Override  
+    protected void onCreate(Bundle savedInstanceState) {  
+        super.onCreate(savedInstanceState);  
+        setContentView(R.layout.activity_main);  
+        adView = (AdView) findViewById(R.id.ad_view);  
+        adRequest = new AdRequest.Builder().build();  
+        adView.loadAd(adRequest);  
+  
+  
+    }  
+    @Override  
+    public void onPause() {  
+        if (adView != null) {  
+            adView.pause();  
+        }  
+        super.onPause();  
+    }  
+  
+    @Override  
+    public void onResume() {  
+        super.onResume();  
+        if (adView != null) {  
+            adView.resume();  
+        }  
+    }  
+  
+    @Override  
+    public void onDestroy() {  
+        if (adView != null) {  
+            adView.destroy();  
+        }  
+        super.onDestroy();  
+    }  
+}  
+
