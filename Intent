@@ -1,2 +1,17 @@
  Intent dash = new Intent(getApplicationContext(), NavigationViewActivity.class);
                 startActivity(dash);
+
+
+///send
+Intent a = new Intent();
+            a.putExtra("a",coinText.getText().toString());
+            a.setClass(getApplicationContext(),GameWon.class);
+            startActivity(a);
+            
+   //receive
+            
+           Intent a = new Intent();
+              String a1= getIntent().getStringExtra("a");
+
+            
+        
