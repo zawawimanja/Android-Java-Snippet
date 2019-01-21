@@ -12,6 +12,11 @@ Intent a = new Intent();
             
            Intent a = new Intent();
               String a1= getIntent().getStringExtra("a");
+              
+  //clear top
+  Intent intent = new Intent(context, ActivityA.class);
+intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+startActivity(intent);
 
             
         
