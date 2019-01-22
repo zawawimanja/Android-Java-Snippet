@@ -1,0 +1,7 @@
+
+
+      //put font in asset folder
+
+        Typeface seven_seg = Typeface.createFromAsset(getAssets(), "suigenerisrg.ttf");
+        
+          clearBtn.setTypeface(seven_seg);
