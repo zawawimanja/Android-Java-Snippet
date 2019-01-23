@@ -1,2 +1,3 @@
 //change in manifest 
-@style/fullscreen
+theme=@style/fullscreen 
+
