@@ -12,4 +12,12 @@
 
 
 //run ads in release variant
-//bundle apk
+//bundle apk need to generated sign apk everytime want to upload in playstore
+
+//when want to update apps
+1. change in manifest version code
+2. change in build gradlle
+version
+version code
+
+
