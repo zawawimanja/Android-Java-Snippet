@@ -1,5 +1,5 @@
 1. create keystore 
-2. remove appid in manifest/refactor
+2. remove appid in manifest/gradle module app
 3. build apk 
 
 //icon 
