@@ -13,7 +13,7 @@ https://romannurik.github.io/AndroidAssetStudio/index.html
 
 //when want to update apps
 1. change in manifest version code
-2. change in build gradlle
+2. change in build gradlle : compile 'com.google.android.gms:play-services-ads:8.4.0'
 version
 version code
 
