@@ -1,5 +1,5 @@
 //need to add in gradle file 
-compile 'com.google.android.gms:play-services-ads:8.4.0'  
+implementation 'com.google.android.gms:play-services-ads:17.1.1'
 
 1)Interstitial
 public class InterstitialAdsActivity extends AppCompatActivity {  
