@@ -35,3 +35,7 @@
             super.onBackPressed();
         }
     }
+    
+    
+     Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://apdm.moe.gov.my"));
+           startActivity(browserIntent);
