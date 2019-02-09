@@ -1,7 +1,7 @@
 //change in manifest 
 theme=@style/fullscreen 
 
-
+Theme.AppCompat.NoActionBar
 android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
 
 https://stackoverflow.com/questions/2868047/fullscreen-activity-in-android
