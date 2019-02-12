@@ -18,5 +18,10 @@ Intent a = new Intent();
 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 startActivity(intent);
 
+//refresh activity
+ Intent intent = getIntent();
+    finish();
+    startActivity(intent);
+
             
         
