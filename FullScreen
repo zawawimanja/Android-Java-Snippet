@@ -6,3 +6,6 @@ android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
 
 https://stackoverflow.com/questions/2868047/fullscreen-activity-in-android
 
+<item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
