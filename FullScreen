@@ -9,3 +9,8 @@ https://stackoverflow.com/questions/2868047/fullscreen-activity-in-android
 <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
 
+//oncreate
+  requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.main);
