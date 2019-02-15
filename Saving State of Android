@@ -3,6 +3,7 @@
  problem when orientation. The proces will kill and start back the process.
 
 //READ https://inthecheesefactory.com/blog/fragment-state-saving-best-practices/en
+//https://www.intertech.com/Blog/saving-and-retrieving-android-instance-state-part-1/
 //PROBLEM WHEN VIEW DOES NOT HAVE ID
 
 public class MainActivity extends AppCompatActivity {
