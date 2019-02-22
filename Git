@@ -1,0 +1,6 @@
+
+
+//sign out from git bash
+git config --global --unset credential.helper
+
+https://stackoverflow.com/questions/28238037/git-log-out-user-from-command-line/28238196
