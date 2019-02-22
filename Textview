@@ -1,0 +1,5 @@
+android:textAppearance="?android:textAppearanceSmall" => 14sp
+
+android:textAppearance="?android:textAppearanceMedium" => 18sp
+
+android:textAppearance="?android:textAppearanceLarge" => 22sp
