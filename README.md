@@ -1,4 +1,3 @@
 # Android-Java-Snippet
 
-
-TIME IS VALUEABLE..DONT WASTE YOUR TIME SEARCHING BASIC THINGS
+Note about android
