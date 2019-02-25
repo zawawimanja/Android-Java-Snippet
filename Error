@@ -53,6 +53,11 @@ or
 
 Solution: just go to gradle.wrapper.properties and then,
 
+
+6) Memory problem
+
+android:hardwareAccelerated="false" , android:largeHeap="true"
+
 distributionUrl=https\://services.gradle.org/distributions/gradle-3.4-all.zip
 
 
