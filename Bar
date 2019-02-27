@@ -85,3 +85,13 @@ public class MyActivity extends AppCompatActivity {
  //logic
  Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
     setSupportActionBar(myToolbar);
+    
+ 3) APP bar
+  app:showAsAction="always" 
+  //in appbar
+   android:showAsAction="ifRoom" 
+   //under appbar
+  
+ 
+    
+    
