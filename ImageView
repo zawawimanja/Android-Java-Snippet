@@ -41,5 +41,9 @@ button.setOnClickListener(new OnClickListener() {
         }else if(score1 == 5){
             img.setImageResource(R.drawable.score_5);
         }	
+	
+	
+	//scaletype
+	https://thoughtbot.com/blog/android-imageview-scaletype-a-visual-guide
         
 
