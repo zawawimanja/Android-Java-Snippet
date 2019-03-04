@@ -1,5 +1,7 @@
 
-
+//solution for window
+ control panel > user accounts > credential manager > Windows credentials > Generic credentials
+ 
 //sign out from git bash
 git config --global --unset credential.helper
 
