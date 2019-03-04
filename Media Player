@@ -1,0 +1,19 @@
+
+
+//if media player not working need to copy raw folder from project that already work using media player
+
+
+mediaPlayer = MediaPlayer.create(quizActivityOne.this,R.raw.click);
+                mediaPlayer.start();
+                //My logic for Button goes in here
+
+
+//when multiple click media player will stop..need to release it
+                mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener(){
+                    // @Override
+                    public void onCompletion(MediaPlayer arg0) {
+                        mediaPlayer.stop();
+                        mediaPlayer.release();
+
+                    }
+                });
