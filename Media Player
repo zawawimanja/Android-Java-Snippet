@@ -17,3 +17,6 @@ mediaPlayer = MediaPlayer.create(quizActivityOne.this,R.raw.click);
 
                     }
                 });
+
+
+//different audio will cause the null pointer eventhough already converting it
