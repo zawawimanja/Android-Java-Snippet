@@ -85,5 +85,8 @@ https://stackoverflow.com/questions/4512981/android-view-inflateexception-binary
 10) Illegal stateexception
 already start but want to start again
 
+11) resource not found
+https://stackoverflow.com/questions/29095063/resourcesnotfoundexception-resource-is-not-a-drawable-color-or-path
+
       
 	
