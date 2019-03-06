@@ -77,5 +77,13 @@ dependencies {
 
      
 8) If contain more than 1 types of layout ,MAKE SURE ALL ATTIRIBUTE HAVE IT.	
+
+
+9) Inflate exception
+https://stackoverflow.com/questions/4512981/android-view-inflateexception-binary-xml-file-line-12-error-inflating-class
+
+10) Illegal stateexception
+already start but want to start again
+
       
 	
