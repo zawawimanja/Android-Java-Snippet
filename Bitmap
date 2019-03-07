@@ -1,0 +1,18 @@
+ public void onClick(View v) {
+                Bitmap bm = ((android.graphics.drawable.BitmapDrawable)image.getDrawable()).getBitmap();
+                try {
+                    java.io.File file = new java.io.File(getExternalCacheDir() + "/image.jpg");
+                    java.io.OutputStream out = new java.io.FileOutputStream(file);
+                    bm.compress(Bitmap.CompressFormat.JPEG, 100, out);
+                    out.flush();
+                    out.close();
+                } catch (Exception e) {
+                  //  showMessage(e.toString());
+                }
+
+                Intent iten = new Intent(android.content.Intent.ACTION_SEND);
+                iten.setType("*/*");
+                iten.putExtra(android.content.Intent.EXTRA_SUBJECT, a);
+                iten.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new java.io.File(getExternalCacheDir() + "/image.jpg")));
+                startActivity(Intent.createChooser(iten, "Send image"));
+            }
