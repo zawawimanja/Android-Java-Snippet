@@ -43,3 +43,12 @@ mColor = mPreferences.getInt(COLOR_KEY, mColor);
     <color name="transparent">#88000000</color>
 </resources>
 
+
+3. default color background
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+    <solid android:color=" #FAFAFA" />
+</shape>
+
+
+
