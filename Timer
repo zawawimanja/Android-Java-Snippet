@@ -24,3 +24,13 @@ private void initTimer()
             }
         };
     }
+
+
+2.
+
+Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    MyActivity.this.interstitialAd.show();
+                }
+            }, 1000);
