@@ -1,5 +1,7 @@
 
-
+//keep device awak
+ <uses-permission android:name="android.permission.WAKE_LOCK"/>
+ 
 //put in manifest above application tag
 
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
