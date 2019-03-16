@@ -1,0 +1,16 @@
+TelephonyManager telephonyManager;
+telephonyManager = (TelephonyManager) getSystemService(Context.
+                    TELEPHONY_SERVICE);
+/*
+* getDeviceId() returns the unique device ID.
+* For example,the IMEI for GSM and the MEID or ESN for CDMA phones.
+*/
+String deviceId = telephonyManager.getDeviceId();
+/*
+* getSubscriberId() returns the unique subscriber ID,
+* For example, the IMSI for a GSM phone.
+*/
+String subscriberId = telephonyManager.getSubscriberId();
+
+//permission
+ android.permission.READ_PHONE_STATE 
