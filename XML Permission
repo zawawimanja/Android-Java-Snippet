@@ -1,0 +1,8 @@
+
+//awake
+ <uses-permission android:name="android.permission.WAKE_LOCK"/>
+ 
+ //install location external
+ //auto,internal,preferExternal
+ android:install location="auto"
+ 
