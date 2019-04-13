@@ -108,3 +108,18 @@ public void onBackPressed() {
                             }
                         });
                 alertDialogBuilder.create().show();
+                
+                
+                //dismiss dialog stock dialog
+                if (mDialog == null) {
+                mDialog = new AlertDialog.Builder(mActivity)
+                        .setMessage(resultString)
+                        .setPositiveButton("OK", null)
+                        .create();
+                mDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                    @Override
+                    public void onDismiss(DialogInterface dialog) {
+                        restartPreview();
+                    }
+                });
+            }
