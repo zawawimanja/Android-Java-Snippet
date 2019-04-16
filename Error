@@ -36,6 +36,8 @@ String s="abc";
 int i=Integer.parseInt(s);//NumberFormatException 	
 
 
+
+
 4)  Caused by: android.view.InflateException: Binary XML file line #46: Binary XML file line #46: Error inflating class textView
      Caused by: android.view.InflateException: Binary XML file line #46: Error inflating class textView
      
@@ -87,6 +89,26 @@ already start but want to start again
 
 11) resource not found
 https://stackoverflow.com/questions/29095063/resourcesnotfoundexception-resource-is-not-a-drawable-color-or-path
+
+12 )  Plugin with id 'com.android.application' not found
+
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'   //change this with latest gradle version.
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+
 
       
 	
