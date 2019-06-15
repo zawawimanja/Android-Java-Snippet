@@ -1,0 +1,35 @@
+  @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK ) {
+
+            if (ConnTryInProgress == true)
+            {
+                Toast.makeText(context, "Communication in progress. Do not click 'Back' button", Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                if (exitcount == 0)
+                {
+                    Toast.makeText(context, "Please press back button again to quit", Toast.LENGTH_LONG).show();
+                    exitcount++;
+                }
+                else
+                {
+                    mBtApp.removeNotification();
+		    		/*
+		    		Intent intent = new Intent(Intent.ACTION_MAIN);
+		    		//intent.addCategory(Intent.CATEGORY_HOME);
+		    		//intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		    		intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			        intent.putExtra("EXIT", true);
+		    		startActivity(intent);
+		    		*/
+                    Intent intent = new Intent(context, BluetoothChat.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.putExtra("EXIT", true);
+                    startActivity(intent);
+                }
+            }
+        }
+        return false; //super.onKeyDown(keyCode, event);
+    }
