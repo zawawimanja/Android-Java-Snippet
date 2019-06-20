@@ -1,8 +1,10 @@
 
 
-up to android oreo there is background restriction.need to use registerReceiver() for custom broadcast.
+1. up to android oreo there is background restriction.need to use registerReceiver() for custom broadcast.
+2. if below than oreo no need to use.
+3. if implicit need to put receiver in manifest 
+4. if explicit dont need .
 
-if below than oreo no need to use.
 
 ///code for oreo
 protected void onCreate(Bundle savedInstanceState) {
