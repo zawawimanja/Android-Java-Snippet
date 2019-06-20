@@ -109,6 +109,26 @@ allprojects {
     }
 }
 
+13 ) ClassCastException: android.app.Application
+
+
+
+ExtraSmartApplication application = (ExtraSmartApplication) getApplication(); 
+
+Add:
+
+<application android:icon="@drawable/icon" 
+    android:label="@string/app_name" 
+    android:name="ExtraSmartApplication">
+
+in your Android manifest.xml file.
+
+14 )getApplicationContext() on a null object reference
+
+ mBtApp = ((BtApp)getApplicationContext());
+
+
+
 
       
 	
