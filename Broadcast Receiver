@@ -1,0 +1,33 @@
+
+
+up to android oreo there is background restriction.need to use registerReceiver() for custom broadcast.
+
+if below than oreo no need to use.
+
+///code for oreo
+protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        btnExplicitBroadcast = findViewById(R.id.btnExplicitBroadcast);
+        btnExplicitBroadcast.setOnClickListener(this);
+        myReceiver= new MyReceiver();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        IntentFilter filter = new IntentFilter();
+        filter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
+
+
+        registerReceiver(myReceiver, filter);
+    }
+
+    public void broadcastIntent() {
+        Intent intent = new Intent();
+        intent.setAction("com.journaldev.AN_INTENT");
+        intent.setComponent(new ComponentName(getPackageName(),"com.journaldev.androidoreobroadcastreceiver.MyReceiver"));
+        getApplicationContext().sendBroadcast(intent);
+    }
