@@ -1,0 +1,11 @@
+
+//custom textview in toolbar
+
+Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarCustom);
+
+setSupportActionBar(toolbar);
+
+TextView textView = (TextView)toolbar.findViewById(R.id.toolbarTextView);
+textView.setText("String");
+
+getSupportActionBar().setDisplayShowTitleEnabled(false);
