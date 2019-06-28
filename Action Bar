@@ -1,0 +1,9 @@
+1 )extends AppCompact
+//for adding action bar
+public class MyActivity extends AppCompatActivity {
+  // ...
+}
+
+2) if you are using navigation drawer project, there is no java file for content_main.xml because that is for homepage.
+
+3)set apptheme= "Theme.AppCompat.Light.DarkActionBar" in manifest.
