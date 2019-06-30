@@ -1,0 +1,11 @@
+What is Utility Class? Utility Class, also known as Helper class, is a class, which contains just static methods, it is stateless and cannot be instantiated. It contains a bunch of related methods, so they can be reused across the application 
+
+
+class MyUtilities{
+    public static String foo(String bar){
+        return bar.toUppercase;
+    }
+}
+Then, on your activity:
+
+MyUtilities.foo("baz");
