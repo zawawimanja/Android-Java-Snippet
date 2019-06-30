@@ -1,0 +1,8 @@
+MVVM
+
+Model - ur logic 
+
+ViewModel - link between model & view 
+
+View - ur ui 
+
