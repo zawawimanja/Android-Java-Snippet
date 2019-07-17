@@ -6,5 +6,9 @@ Using postman
 In Manifest Application Tag
 - android:usesCleartextTraffic="true"
 
+                                            //use ipaddress v4 check using ipconfig
+    private static final String ROOT_URL = "http://192.168.2.132/PHP/Api.php?apicall=";
 
 
+  to access localhost in real device 
+   //use ipaddress v4 check using ipconfig
