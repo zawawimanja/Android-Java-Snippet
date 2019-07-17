@@ -1,0 +1,10 @@
+Using postman
+- go to body 
+- choose form-data & insert the data & push send
+- server will received to check whether the api is ok
+
+In Manifest Application Tag
+- android:usesCleartextTraffic="true"
+
+
+
