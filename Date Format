@@ -1,0 +1,29 @@
+If using simple date format cannot use same object for format & parse
+
+
+   SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yy HH:mm:ss");
+
+        SimpleDateFormat sdf1 = new SimpleDateFormat("dd-MM-yy HH:mm:ss");
+
+        sdf.setTimeZone(timezone);
+
+
+
+        try{
+
+             expired_date=sdf.parse(expired);
+
+        }catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+
+
+        try{
+
+            localdate= sdf1.format(date);
+             local_date=sdf1.parse(localdate);
+
+        }catch (ParseException e) {
+            e.printStackTrace();
+        }
