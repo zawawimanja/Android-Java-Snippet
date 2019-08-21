@@ -6,9 +6,35 @@
 4. if explicit dont need .
 
 
-///code for oreo
-//in mainactivity
-protected void onCreate(Bundle savedInstanceState) {
+
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    Button btnExplicitBroadcast;
+
+    MyReceiver myReceiver;
+
+    public class MyReceiver extends BroadcastReceiver {
+
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+
+            String action = intent.getAction();
+            if (action.equals("com.journaldev.AN_INTENT")) {
+                Toast.makeText(context, "Explicit Broadcast was triggered", Toast.LENGTH_SHORT).show();
+            }
+
+            if (("android.net.conn.CONNECTIVITY_CHANGE").equals(action)) {
+                Toast.makeText(context, "Implicit Broadcast was triggered using registerReceiver", Toast.LENGTH_SHORT).show();
+            }
+
+        }
+    }
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -31,12 +57,22 @@ protected void onCreate(Bundle savedInstanceState) {
     public void broadcastIntent() {
         Intent intent = new Intent();
         intent.setAction("com.journaldev.AN_INTENT");
+        intent.setComponent(new ComponentName(getPackageName(),"com.journaldev.androidoreobroadcastreceiver.MyReceiver"));
         getApplicationContext().sendBroadcast(intent);
     }
 
-//in myreceiverclass
-public class MyReceiver extends BroadcastReceiver{
-   @Override
-   public void onReceive(Context context, Intent intent) {
-      Toast.makeText(context, "Intent Detected.", Toast.LENGTH_LONG).show();
-   }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        unregisterReceiver(myReceiver);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btnExplicitBroadcast:
+                broadcastIntent();
+                break;
+        }
+    }
+}
