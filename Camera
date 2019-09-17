@@ -4,3 +4,26 @@ Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 BuildConfig.APPLICATION_ID + ".provider", photo);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
         startActivityForResult(intent, PHOTO_REQUEST);
+
+
+//manifest
+
+<provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+
+//xml file in res name provider_paths
+
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="external_files"
+        path="."/>
+</paths>
