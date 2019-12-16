@@ -1,2 +1,5 @@
 The most common type of Bluetooth socket is RFCOMM, which is the type supported by the Android APIs. RFCOMM is a connection-oriented, streaming transport over Bluetooth. It is also known as the Serial Port Profile (SPP).
 
+, 'core bluetooth' on ios only supports BLE devices and only on a rather high level. there is only one specific profile being offered (GATT)
+
+Now if you want RFCCOMM (part of SPP) you might be able to leverage the 'External Accessory' framework BUT you can only use only your app with a your device (as in: you manufactured it and now wrote an app to use it). You would also need a license from apple so ....... not really an option
