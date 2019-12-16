@@ -1,0 +1,15 @@
+BLE: Android built-in platform to discover devices, request and transmit information from our bluetooth device.
+
+GATT: Generic Attribute Profile to define how to exchange data using predefined attributes.
+
+Central: the Computer/Tablet/Mobile device, also referred as GATT client. Scans, requests and uses the data given by the peripheral.
+
+Peripheral: the device broadcasting the data, also referred as GATT server. The data is structured as definitions of how to interact with it’s ‘database’.
+
+Services: set of provided features and associated behaviors to interact with the peripheral. Each service contains a collection of characteristics.
+
+Characteristics: definition of the data divided into declaration and value. Using permission properties (read, write, notify, indicate) to get a value.
+
+Descriptor: an optional attribute nested in a characteristic that describes the specific value and how to access it.
+
+UUID: Universally Unique ID that are transmitted over the air so a peripheral can inform a central what services it provides.
