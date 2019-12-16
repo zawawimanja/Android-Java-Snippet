@@ -13,3 +13,5 @@ Characteristics: definition of the data divided into declaration and value. Usin
 Descriptor: an optional attribute nested in a characteristic that describes the specific value and how to access it.
 
 UUID: Universally Unique ID that are transmitted over the air so a peripheral can inform a central what services it provides.
+
+BLE device remains in sleep mode constantly except for when a connection is initiated. The actual connection times are only a few ms, while Bluetooth takes ~100ms. The reason the connections are short is that the data rates are high at 1 Mb/s.
