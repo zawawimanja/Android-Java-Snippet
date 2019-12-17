@@ -46,5 +46,23 @@
         android:text="@{user.name}"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+        
+        
+        //two way data binding
+        
+        <CheckBox
+    android:id="@+id/rememberMeCheckBox"
+    android:checked="@={viewmodel.rememberMe}"
+/>
    
+   
+   //onclick
+   <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:onClick="@{()-> viewModel.onLoginClicked()}"
+                android:text="LOGIN"
+                bind:toastMessage="@{viewModel.toastMessage}" />
+
     
