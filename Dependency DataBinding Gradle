@@ -1,8 +1,50 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 
 ///in app gradle
-
  dataBinding {
         enabled = true
     }
+    
+    
+    //in layout
+    
+    <layout>
+    
+      <data>
+
+        <variable
+            name="user"
+            type="com.journaldev.databinding.User" />
+    </data>
+    
+    
+    </layout>
+   
+   
+   //in main
+     ActivityMainBinding binding;
+    private User user;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+
+    //    binding.t.setText("ok");
+
+        user = new User();
+        user.setName("Ravi Tamada");
+       // user.setEmail("ravi@androidhive.info");
+
+        binding.setUser(user);
+    }
+    
+    //in textview
+    
+     <TextView
+        android:id="@+id/t"
+        android:text="@{user.name}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+   
+    
