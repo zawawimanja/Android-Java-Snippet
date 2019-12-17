@@ -1,1 +1,6 @@
-setValue() method must be called from the main thread. But if you need set a value from a background thread, postValue() should be used.
+setValue() method must be called from the main thread.
+But if you need set a value from a background thread, postValue() should be used.
+
+setvalue()
+postvalue()
+getvalue()
