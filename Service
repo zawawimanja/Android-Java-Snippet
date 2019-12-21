@@ -1,0 +1,14 @@
+
+Bindservice()
+Startservice()
+
+A service is a component which runs in the background without direct interaction with the user.
+As the service has no user interface, it is not bound to the lifecycle of an activity.
+
+Services are used for repetitive and potentially long running operations, i.e., Internet downloads, checking for new data, data processing
+, updating content providers and the like.
+
+
+Use Bindservice() interaction in activity
+
+https://stackoverflow.com/questions/13787460/when-is-smart-to-use-bindservice-and-when-startservice
