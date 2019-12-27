@@ -1,0 +1,6 @@
+
+
+Main/UI  - will stop all process
+          - user input
+
+Background  - network call/data read write
