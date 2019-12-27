@@ -4,3 +4,6 @@ But if you need set a value from a background thread, postValue() should be used
 setvalue()
 postvalue()
 getvalue()
+mutable - can change & have setvalue /postvalue
+
+livedata- immutable.cannot change and does not have setvalue/postvalue
