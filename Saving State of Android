@@ -11,6 +11,19 @@ public class MainActivity extends AppCompatActivity {
     // These variable are destroyed along with Activity
     private int someVarA;
     private String someVarB;
+    
+    
+       // Restore the saved instance state.
+        if (savedInstanceState != null) {
+
+            mCount = savedInstanceState.getInt(COUNT_KEY);
+            if (mCount != 0) {
+                mShowCountTextView.setText(String.format("%s", mCount));
+            }
+
+            mColor = savedInstanceState.getInt(COLOR_KEY);
+            mShowCountTextView.setBackgroundColor(mColor);
+        }
 
     ...
 
